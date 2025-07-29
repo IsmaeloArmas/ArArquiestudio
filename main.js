@@ -23,10 +23,15 @@ gsap.fromTo ( ".loading-page",
     }
 );
 
-gsap.from (".logo-name",
-    {
+gsap.fromTo (".logo-name", 
+    { 
         y: 50,
-        opacity: 0,
+        opacity: 0
+    },
+    {
+        time: 2,
+        y: 0,
+        opacity: 1,
     }
 );
 
