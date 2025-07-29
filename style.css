@@ -16,17 +16,16 @@
 }
 
 body {
-    font-family: Quicksand;
+    font-family: Oswald;
     height: 100vh;
     width: 100vw;
     background-color: var(--negro);
+    overflow-x: hidden;
 }
 
 body.loading {
   overflow: hidden;
 }
-
-
 
 .loading-page {
     z-index: 1000;
@@ -63,6 +62,7 @@ body.loading {
 }
 
 .logo-name {
+    font-family: Quicksand;
     color: var(--pre-loader-color);
     font-size: 6vw;
     text-transform: uppercase;
@@ -88,8 +88,11 @@ body.loading {
         transform: translateY(-100%);
     }
 
-.navbar a {
+a {
     text-decoration: none;
+}
+
+.navbar a {
     font-size: 1.2rem;
     color: var(--color-primario);
     padding: .5rem;
@@ -155,6 +158,11 @@ section {
     width: 100%;
 }
 
+.img img{
+    filter: brightness(.9);
+    filter: saturate(0);
+}
+
 .card{ 
     display: flex;
     align-items: center;
@@ -162,8 +170,8 @@ section {
 }
 
 .card .titulo {
-  font-size: 2rem;
-  color: var(--color-primario);
+  font-size: 3rem;
+  color: var(--blanco);
   text-align: center;
   z-index: 2;
   position: relative;
@@ -173,26 +181,50 @@ section {
 h1 {
     text-transform: uppercase;
     font-family: Oswald;
-    font-size: 4rem;
+    font-size: 3.8rem;
     font-weight: 450;
     line-height: 1.2;
 }
 
 .outro {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+lord-icon {
+  width: 100px;
+  height: 100px;
+  color: var(--blanco);
+}
+
+.outro a{
+    font-size: 2rem;
+    color: var(--color-primario);
+    top: 0;
+}
+
+.icons-cont {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .header {
     position: absolute;
     top: 50%;
-    left: 33%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 50%;
     z-index: 1;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -258,10 +290,51 @@ footer {
     align-items: center;
     justify-content: center;
     z-index: auto;
+    color: var(--color-primario);
+}
+
+footer:hover{
+    background-color: var(--blanco);
+    color: var(--negro);
 }
 
 footer p {
-    color: var(--color-primario);
     text-align: center;
+}
 
+/* Media query para tablt */
+@media screen and (min-width: 650px) {
+    .navbar a{
+        font-size: 2rem;
+    }
+
+    .btn a{
+        font-size: 2rem;
+    }
+
+    .spotlight-images {
+        left: 0;
+        transform: none;
+    }
+
+    .icons-cont {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    #logo-hero {
+        width: 40%;
+        height: auto;
+    }
+
+    .btn {
+        width: 20%;
+        height: auto;
+    }
+
+    .icons-cont {
+        flex-direction: row;
+    }
 }

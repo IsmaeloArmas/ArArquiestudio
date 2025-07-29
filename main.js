@@ -14,7 +14,7 @@ gsap.fromTo ( ".loading-page",
     { opacity: 1 },
     {
         opacity: 0,
-        duration: 2,
+        duration: 2, 
         delay: 2.5,
         ease: "power2.inOut",
         onComplete: () => {
