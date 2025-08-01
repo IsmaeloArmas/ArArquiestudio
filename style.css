@@ -76,12 +76,20 @@ body.loading {
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem;
     z-index: 1000;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     top: 0;
+}
+
+.leftandright {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar.hidden {
@@ -93,9 +101,15 @@ a {
 }
 
 .navbar a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--color-primario);
     padding: .5rem;
+}
+
+.logonavbar{
+    width: auto;
+    height: 50px;
+    display: none;
 }
 
 .hero {
@@ -187,16 +201,17 @@ section {
 h1 {
     text-transform: uppercase;
     font-family: Oswald;
-    font-size: 3.8rem;
+    font-size: 3rem;
     font-weight: 450;
     line-height: 1.2;
 }
 
 .outro {
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 50px;
 }
 
@@ -204,6 +219,12 @@ lord-icon {
   width: 100px;
   height: 100px;
   color: var(--blanco);
+}
+
+.icon {
+   width: 100px;
+  height: 100px;
+  color: var(--blanco); 
 }
 
 .outro a{
@@ -288,6 +309,15 @@ lord-icon {
     height: 100%;
 }
 
+.link-hero{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,1)), url(Gallery/Galery.png) center/cover;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     background-color: var(--negro);
     width: auto;
@@ -308,10 +338,22 @@ footer p {
     text-align: center;
 }
 
+@media screen and (max-width: 405px){
+    .navbar a{
+        font-size: .8rem;
+    }
+}
+
 /* Media query para tablt */
 @media screen and (min-width: 650px) {
+    .logonavbar{
+        display: block;
+    }
+    h1{
+        font-size: 4rem;
+    }
     .navbar a{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .btn a{
@@ -330,6 +372,9 @@ footer p {
 }
 
 @media screen and (min-width: 1050px) {
+    h1{
+        font-size: 5rem;
+    }
     #logo-hero {
         width: 40%;
         height: auto;

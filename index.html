@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
@@ -25,13 +26,22 @@
     </div>
   </div>
   <nav class="navbar">
-    <div class="left">
+    <div class="leftandright">
+      <div class="left">
       <a href="#">Inicio</a>
       <a href="#sec2">Servicios</a>
     </div>
+    <dotlottie-wc
+      class="logonavbar"
+      src="https://lottie.host/54a44818-bd49-49c3-95ed-1df12b891816/xUXDMoqox4.json"
+      speed=".5"
+      autoplay
+      loop
+    ></dotlottie-wc>
     <div class="right">
-      <a href="#">Galeria</a>
+      <a href="gallery.html">Galeria</a>
       <a href="#sec3">Contactos</a>
+    </div>
     </div>
   </nav>
   <main>
@@ -44,11 +54,11 @@
       <div class="img"><img src="img/cards/proyecto3.jpeg" alt=""></div>
     </section>
     <section class="card pinned">
-      <h2 class="titulo">Desarrollo Técnico</h2>
+      <h2 class="titulo">Desarrollo<br>Técnico</h2>
       <div class="img"><img src="img/31576.jpg" alt=""></div>
     </section>
     <section class="card pinned">
-      <h2 class="titulo">Visualización Arquitectónica</h2>
+      <h2 class="titulo">Visualización<br>Arquitectónica</h2>
       <div class="img"><img src="img/cards/proyecto6.jpeg" alt=""></div>
     </section>
     <section class="card scroll">
@@ -94,8 +104,11 @@
         </div>
       </div>
     </section>
+    <section class="link-hero">
+      <button class="btn"><a href="gallery.html">GALERIA</a></button>
+    </section>
     <section id="sec3" class="outro">
-      <a href="#">Galeria</a>
+      <a href="#">Contactos</a>
       <div class="icons-cont">
       <a href="https://api.whatsapp.com/send?phone=3461054698&text=¡Hola! Estoy interesado en los servicios de arquitectura. ¿Podrían brindarme más información?">
       <lord-icon
@@ -116,6 +129,13 @@
       </lord-icon>
       </a>
       </div>
+      <dotlottie-wc
+        src="https://lottie.host/54a44818-bd49-49c3-95ed-1df12b891816/xUXDMoqox4.json"
+        style="width: 100px;height: 100px"
+        speed=".5"
+        autoplay
+        loop
+      ></dotlottie-wc>
     </section>
   </main>
   <footer class="footer">
